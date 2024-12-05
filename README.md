@@ -55,7 +55,7 @@ This README file provides an overview of the SQL tables and queries used to crea
         );
         
     
-   4-Department Managers
+    4-Department Managers
     
         CREATE TABLE dept_manager(
             dept_no VARCHAR NOT NULL,
