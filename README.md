@@ -24,7 +24,7 @@ This README file provides an overview of the SQL tables and queries used to crea
 
 ## A- Tables
 
-    ***1-Titles***
+    1-Titles
     
         CREATE TABLE titles(
             title_id VARCHAR NOT NULL,
@@ -32,7 +32,7 @@ This README file provides an overview of the SQL tables and queries used to crea
             PRIMARY KEY (title_id)
         );
     
-    ***2-Employees***
+    2-Employees
     
         CREATE TABLE employees(
             emp_no INT NOT NULL,
@@ -46,8 +46,7 @@ This README file provides an overview of the SQL tables and queries used to crea
             PRIMARY KEY (emp_no)
         );
     
-    
-    ***3-Departments***
+    3-Departments
     
         CREATE TABLE departments(
             dept_no VARCHAR NOT NULL,
@@ -56,7 +55,7 @@ This README file provides an overview of the SQL tables and queries used to crea
         );
         
     
-    ***4-Department Managers***
+   4-Department Managers
     
         CREATE TABLE dept_manager(
             dept_no VARCHAR NOT NULL,
@@ -67,7 +66,7 @@ This README file provides an overview of the SQL tables and queries used to crea
         );
     
     
-    ***5-Department Employees***
+   5-Department Employees
     
         CREATE TABLE dept_emp(
             emp_no INT NOT NULL,
@@ -77,8 +76,7 @@ This README file provides an overview of the SQL tables and queries used to crea
             PRIMARY KEY (emp_no, dept_no)
         );
     
-    
-    ***6-Salaries***
+    6-Salaries
     
         CREATE TABLE salaries(
             emp_no INT NOT NULL,
