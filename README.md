@@ -37,7 +37,7 @@ This README file provides an overview of the SQL tables and queries used to crea
        8- Employee Last Name Frequency
     
     C-Usage
-    D-Acknowledment
+    D-Acknowledgements
 
 ## A- Schemata
 
@@ -163,16 +163,16 @@ This README file provides an overview of the SQL tables and queries used to crea
 
 ## C- Usage
 
-   1. Create Tables: Execute the CREATE TABLE statements to set up the database schema.
+    1. Create Tables: Execute the CREATE TABLE statements to set up the database schema.
+        
+    2.Insert Data: Insert relevant data into the tables as required.
+        
+    3.Run Queries: Execute the provided SQL queries in the pgAdmin Query Tool to retrieve the specific information from the database.
     
-   2.Insert Data: Insert relevant data into the tables as required.
+    4.Modify as Needed: Adjust the queries to fit any specific requirements or different conditions as necessary.
     
-   3.Run Queries: Execute the provided SQL queries in the pgAdmin Query Tool to retrieve the specific information from the database.
-
-   4.Modify as Needed: Adjust the queries to fit any specific requirements or different conditions as necessary.
-
-   5.Analyze Results: Use the query results for analysis, reporting, or further data processing as needed.
-   
+    5.Analyze Results: Use the query results for analysis, reporting, or further data processing as needed.
+       
 ## D- Acknowledgements
 
 **I would like to thank my instructor and Xpert for their guidance and support throughout this project.**
