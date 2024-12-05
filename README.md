@@ -66,7 +66,7 @@ This README file provides an overview of the SQL tables and queries used to crea
         );
     
     
-   5-Department Employees
+    5-Department Employees
     
         CREATE TABLE dept_emp(
             emp_no INT NOT NULL,
@@ -76,7 +76,7 @@ This README file provides an overview of the SQL tables and queries used to crea
             PRIMARY KEY (emp_no, dept_no)
         );
     
-    6-Salaries
+     6-Salaries
     
         CREATE TABLE salaries(
             emp_no INT NOT NULL,
