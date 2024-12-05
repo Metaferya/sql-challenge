@@ -4,91 +4,92 @@ This README file provides an overview of the SQL tables and queries used to crea
 
 ## Table of Contents
 
-    #Tables#
+    A-Tables
     
-    Titles
+        1-Titles
+        
+        2-Employees
+        
+        3-Departments
+        
+        4-Department Managers
+        
+        5-Department Employees
+        
+        6-Salaries
     
-    Employees
+    B-Queries
     
-    Departments
+    C-Usage
+
+## A- Tables
+
+    ***1-Titles***
     
-    Department Managers
+        CREATE TABLE titles(
+            title_id VARCHAR NOT NULL,
+            title VARCHAR NOT NULL,
+            PRIMARY KEY (title_id)
+        );
     
-    Department Employees
+    ***2-Employees***
     
-    Salaries
+        CREATE TABLE employees(
+            emp_no INT NOT NULL,
+            emp_title_id VARCHAR NOT NULL,
+            birth_date DATE NOT NULL,
+            first_name VARCHAR NOT NULL,
+            last_name VARCHAR NOT NULL,
+            sex VARCHAR NOT NULL,
+            hire_date DATE NOT NULL,
+            FOREIGN KEY (emp_title_id) REFERENCES titles(title_id),
+            PRIMARY KEY (emp_no)
+        );
     
-    Queries
     
-    Usage
-
-**Tables**
-
-***Titles***
-
-    CREATE TABLE titles(
-        title_id VARCHAR NOT NULL,
-        title VARCHAR NOT NULL,
-        PRIMARY KEY (title_id)
-    );
-
-***Employees***
-
-    CREATE TABLE employees(
-        emp_no INT NOT NULL,
-        emp_title_id VARCHAR NOT NULL,
-        birth_date DATE NOT NULL,
-        first_name VARCHAR NOT NULL,
-        last_name VARCHAR NOT NULL,
-        sex VARCHAR NOT NULL,
-        hire_date DATE NOT NULL,
-        FOREIGN KEY (emp_title_id) REFERENCES titles(title_id),
-        PRIMARY KEY (emp_no)
-    );
-
-
-***Departments***
-
-    CREATE TABLE departments(
-        dept_no VARCHAR NOT NULL,
-        dept_name VARCHAR NOT NULL,
-        PRIMARY KEY (dept_no)
-    );
+    ***3-Departments***
     
+        CREATE TABLE departments(
+            dept_no VARCHAR NOT NULL,
+            dept_name VARCHAR NOT NULL,
+            PRIMARY KEY (dept_no)
+        );
+        
+    
+    ***4-Department Managers***
+    
+        CREATE TABLE dept_manager(
+            dept_no VARCHAR NOT NULL,
+            emp_no INT NOT NULL,
+            FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+            FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
+            PRIMARY KEY (dept_no, emp_no)
+        );
+    
+    
+    ***5-Department Employees***
+    
+        CREATE TABLE dept_emp(
+            emp_no INT NOT NULL,
+            dept_no VARCHAR NOT NULL,
+            FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+            FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
+            PRIMARY KEY (emp_no, dept_no)
+        );
+    
+    
+    ***6-Salaries***
+    
+        CREATE TABLE salaries(
+            emp_no INT NOT NULL,
+            salary INT NOT NULL,
+            FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+            PRIMARY KEY (emp_no)
+        );
 
-***Department Managers***
+## B- Query
 
-    CREATE TABLE dept_manager(
-        dept_no VARCHAR NOT NULL,
-        emp_no INT NOT NULL,
-        FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-        FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
-        PRIMARY KEY (dept_no, emp_no)
-    );
-
-
-***Department Employees***
-
-    CREATE TABLE dept_emp(
-        emp_no INT NOT NULL,
-        dept_no VARCHAR NOT NULL,
-        FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-        FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
-        PRIMARY KEY (emp_no, dept_no)
-    );
-
-
-***Salaries***
-
-    CREATE TABLE salaries(
-        emp_no INT NOT NULL,
-        salary INT NOT NULL,
-        FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-        PRIMARY KEY (emp_no)
-    );
-
-
-***Usage***
+## C- Usage
 
    1. Create Tables: Execute the CREATE TABLE statements to set up the database schema.
     
