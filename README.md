@@ -37,6 +37,7 @@ This README file provides an overview of the SQL tables and queries used to crea
        8- Employee Last Name Frequency
     
     C-Usage
+    D-Acknowledment
 
 ## A- Schemata
 
@@ -172,7 +173,7 @@ This README file provides an overview of the SQL tables and queries used to crea
 
    5.Analyze Results: Use the query results for analysis, reporting, or further data processing as needed.
    
-## Acknowledgements
+## D- Acknowledgements
 
 **I would like to thank my instructor and Xpert for their guidance and support throughout this project.**
 
